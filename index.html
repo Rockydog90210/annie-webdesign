@@ -1,0 +1,214 @@
+<DOCTYPE html>
+    <html>
+        
+        <head>
+            <title>Dragon clicker </title>
+            <link rel ="stylesheet" href="styles.css">
+    
+        </head>
+        
+        
+        
+        <body>
+            <p> 0 </p>
+             
+            <img src="dragon.png" id="moneyButton" style="width:200px;">
+            
+            
+            <br>
+            <br>
+            <br>
+            <h3> Shop!</h3>
+            <h6> Click Power </h6>
+            <hr>
+            <!-- click power buttons -->
+            <button id="clickPowerButtonX2"> +1 click power $50 </button> <!-- doubles click power-->
+            
+            <button id="clickPowerButtonX4"> +2 click power $200 </button> <!-- doubles click power again!-->
+            
+            <button id="clickPowerButtonX8"> +4 click power $500 </button> <!-- doubles click power again!-->
+           
+            <hr>
+           
+            <h6> auto clickers </h6>
+            
+            <hr>    <!-- autoclick buttons-->
+            <button id="autoClickButtonX1">one Auto Clicker $30</button>
+            <button id="autoClickButtonX2">5 Auto Clickers $100</button>
+            
+            <hr>
+            
+        </body>
+        
+        
+        
+        <script>
+            
+            let totalMoney = 0;
+            let clickPower = 0;
+            dragonFrame = 1; // so the computer knows witch frame to display when you click
+            
+            const moneyButton = document.getElementById("moneyButton") // defines my buttons 
+            
+            const totMoney = document.querySelector("p");
+            const doubleClickButtonX2 = document.getElementById("clickPowerButtonX2");
+            const doubleClickButtonX4 = document.getElementById("clickPowerButtonX4");
+            const doubleClickButtonX8 = document.getElementById("clickPowerButtonX8");
+            
+            const autoClickerX1 = document.getElementById("autoClickButtonX1");
+            const autoClickerX2 = document.getElementById("autoClickButtonX2");
+            
+            moneyButton.addEventListener("click", updateNum);
+            
+            doubleClickButtonX2.addEventListener("click", doubleClickPowerX2);
+            doubleClickButtonX4.addEventListener("click", doubleClickPowerX4);
+            doubleClickButtonX8.addEventListener("click", doubleClickPowerX8);
+            
+            autoClickerX1.addEventListener("click", autoClickX1);
+            autoClickerX2.addEventListener("click", autoClickX2);
+            
+            
+            
+            
+            function updateNum(){ //updates total money and plays clicking animations 
+                
+                
+                checkClickPower(); // checks your click power to see how much your money needs to incress
+                
+                totMoney.textContent = totalMoney; //updates the number
+                dragonFlap();// makes the draon flap her wings
+            }
+            
+            
+            
+            
+            function checkClickPower(){ //checks your click power to see how much your total momney needs to go up
+                if (clickPower === 0){
+                    for (var i = 0; i < 1; i++){
+                            ++totalMoney;    
+                        }
+                    
+                }else if(clickPower ===2){//checks what your click power is 
+                        for (var i = 0; i < 2; i++){
+                            ++totalMoney;    
+                        }    
+                    }else if(clickPower === 4){
+                        for (var i = 0; i < 4; i++){
+                            ++totalMoney;    
+                        }
+                        
+                    }else if(clickPower === 8){
+                        for (var i = 0; i < 16; i++){
+                            ++totalMoney;    
+                        }
+                    }    
+                
+            }
+            
+            
+            
+            function doubleClickPowerX2(){ //double click button
+                if (totalMoney >= 50) {
+                    clickPower = 2;
+                    totalMoney -= 50;
+                     
+                    
+                    totMoney.textContent = totalMoney;// reloads textcontent
+                    
+                    document.getElementById("clickPowerButtonX2").innerHTML = "sold!";
+                    document.getElementById("clickPowerButtonX2").style.backgroundColor = "darkRed";
+                    document.getElementById("clickPowerButtonX2").style.pointerEvents = "none";
+                    document.getElementById("clickPowerButtonX4").style.display = "inline";
+                    
+                    
+                }            
+            }
+            
+             function doubleClickPowerX4(){ //double click button
+                if (totalMoney >= 200) {
+                    clickPower = 4;
+                    totalMoney -= 200;
+                     
+                    
+                    totMoney.textContent = totalMoney;// reloads textcontent
+                    
+                    document.getElementById("clickPowerButtonX4").innerHTML = "sold!";
+                    document.getElementById("clickPowerButtonX4").style.backgroundColor = "darkRed";
+                    document.getElementById("clickPowerButtonX4").style.pointerEvents = "none";
+                    document.getElementById("clickPowerButtonX8").style.display = "inline";
+                    
+                }            
+            }
+            
+            function doubleClickPowerX8(){ //double click button
+                if (totalMoney >= 500) {
+                    clickPower = 8;
+                    totalMoney -= 500;
+                     
+                    
+                    totMoney.textContent = totalMoney;// reloads textcontent
+                    
+                    document.getElementById("clickPowerButtonX8").innerHTML = "sold!";
+                    document.getElementById("clickPowerButtonX8").style.backgroundColor = "darkRed";
+                    document.getElementById("clickPowerButtonX8").style.pointerEvents = "none";
+                    
+                    
+                }            
+            }
+            
+            function autoClickX1(){
+                if (totalMoney >= 30) {
+                    totalMoney -= 30;
+                    totMoney.textContent = totalMoney;
+                    setInterval(autoClick1, 1000); 
+                
+                    
+                    document.getElementById("autoClickButtonX1").innerHTML = "sold!";
+                    document.getElementById("autoClickButtonX1").style.backgroundColor = "darkRed";
+                    document.getElementById("autoClickButtonX1").style.pointerEvents = "none";
+                    document.getElementById("autoClickButtonX2").style.display = "inline"; 
+                    }
+                    
+                }
+                
+                function autoClickX2(){
+                if (totalMoney >= 100) {
+                    totalMoney -= 100;
+                    totMoney.textContent = totalMoney;
+                    setInterval(autoClick2, 1000); 
+                
+                    
+                    document.getElementById("autoClickButtonX2").innerHTML = "sold!";
+                    document.getElementById("autoClickButtonX2").style.backgroundColor = "darkRed";
+                    document.getElementById("autoClickButtonX2").style.pointerEvents = "none"; 
+                    }
+                    
+                }
+                
+            
+            function autoClick1(){
+                ++totalMoney;
+                totMoney.textContent = totalMoney;
+            }
+            
+            function autoClick2(){
+                for (var i = 0; i < 5; i++){
+                    ++totalMoney;}
+                totMoney.textContent = totalMoney;
+            }
+            
+            function dragonFlap(){ //animates the main imagie 
+                if (dragonFrame === 1){
+                    document.getElementById("moneyButton").src = "dragonFlap.png";
+                    dragonFrame = 2;
+                    
+                }else if (dragonFrame = 2){
+                    document.getElementById("moneyButton").src = "dragon.png";
+                    dragonFrame = 1; 
+                }
+            }
+            
+            
+        </script>
+    
+    </html>
