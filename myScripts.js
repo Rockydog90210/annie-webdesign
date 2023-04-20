@@ -156,11 +156,11 @@
             } */
 
             function CheckAutoClick(){
-                if autoClickPower() === 1{
+                if (autoClickPower === 1){
                     ++totalMoney;
                     totMoney.textContent = totalMoney;
 
-                }else if autoClickPower() === 2{
+                }else if (autoClickPower === 2){
                     for (var i = 0; i < 5; i++){
                         ++totalMoney;}
                     totMoney.textContent = totalMoney;
