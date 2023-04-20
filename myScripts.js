@@ -132,7 +132,6 @@
                     totalMoney -= 100;
                     autoClickPower = 2
                     totMoney.textContent = totalMoney;
-                    //setInterval(autoClick2, 1000); 
                 
                     
                     document.getElementById("autoClickButtonX2").innerHTML = "sold!";
@@ -145,15 +144,9 @@
             
             function autoClick(){
                 CheckAutoClick()
-                ++totalMoney;
                 totMoney.textContent = totalMoney;
             }
             
-         /*   function autoClick2(){
-                for (var i = 0; i < 5; i++){
-                    ++totalMoney;}
-                totMoney.textContent = totalMoney;
-            } */
 
             function CheckAutoClick(){
                 if (autoClickPower === 1){
