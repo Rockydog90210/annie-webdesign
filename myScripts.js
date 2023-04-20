@@ -1,5 +1,6 @@
             let totalMoney = 0;
             let clickPower = 0;
+            let autoClickPower = 0;
             dragonFrame = 1; // so the computer knows witch frame to display when you click
             
             const moneyButton = document.getElementById("moneyButton") // defines my buttons 
@@ -110,11 +111,12 @@
                 }            
             }
             
-            function autoClickX1(){
+            function autoClickX1(){ //autoclickers 
                 if (totalMoney >= 30) {
                     totalMoney -= 30;
+                    autoClickPower = 1;
                     totMoney.textContent = totalMoney;
-                    setInterval(autoClick1, 1000); 
+                    setInterval(autoClick, 1000); 
                 
                     
                     document.getElementById("autoClickButtonX1").innerHTML = "sold!";
@@ -128,8 +130,9 @@
                 function autoClickX2(){
                 if (totalMoney >= 100) {
                     totalMoney -= 100;
+                    autoClickPower = 2
                     totMoney.textContent = totalMoney;
-                    setInterval(autoClick2, 1000); 
+                    //setInterval(autoClick2, 1000); 
                 
                     
                     document.getElementById("autoClickButtonX2").innerHTML = "sold!";
@@ -140,15 +143,30 @@
                 }
                 
             
-            function autoClick1(){
+            function autoClick(){
+                CheckAutoClick()
                 ++totalMoney;
                 totMoney.textContent = totalMoney;
             }
             
-            function autoClick2(){
+         /*   function autoClick2(){
                 for (var i = 0; i < 5; i++){
                     ++totalMoney;}
                 totMoney.textContent = totalMoney;
+            } */
+
+            function CheckAutoClick(){
+                if autoClickPower() === 1{
+                    ++totalMoney;
+                    totMoney.textContent = totalMoney;
+
+                }else if autoClickPower() === 2{
+                    for (var i = 0; i < 5; i++){
+                        ++totalMoney;}
+                    totMoney.textContent = totalMoney;
+                }
+
+
             }
             
             function dragonFlap(){ //animates the main image 
