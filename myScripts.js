@@ -162,7 +162,7 @@
             
             function dragonFlap(){ //animates the main image 
                 if (dragonFrame === 1){
-                    document.getElementById("moneyButton").src = "dragonFlap.png";
+                    document.getElementById("moneyButton").src = "dragonflap.png";
                     dragonFrame = 2;
                     
                 }else if (dragonFrame = 2){
