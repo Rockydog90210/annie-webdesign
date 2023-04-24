@@ -27,9 +27,7 @@
             
             function updateNum(){ //updates total money and plays clicking animations 
                 
-                
                 checkClickPower(); // checks your click power to see how much your money needs to incress
-                
                 totMoney.textContent = totalMoney; //updates the number
                 dragonFlap();// makes the draon flap her wings
             }
@@ -53,7 +51,7 @@
                         }
                         
                     }else if(clickPower === 8){
-                        for (var i = 0; i < 16; i++){
+                        for (var i = 0; i < 8; i++){
                             ++totalMoney;    
                         }
                     }    
