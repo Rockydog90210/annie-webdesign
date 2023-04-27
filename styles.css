@@ -31,9 +31,6 @@ body{
     
 }
 
-#clickPowerButtonX4, #clickPowerButtonX8, #autoClickButtonX2{
-    display:none;    
-}
 
 #moneyButton:active{
     transform: scale(1.05);
