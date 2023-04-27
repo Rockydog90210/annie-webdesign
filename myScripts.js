@@ -15,14 +15,20 @@
             const doubleClickButtonX1 = document.getElementById('clickPowerButtonX1');
             const doubleClickButtonX5 = document.getElementById('clickPowerButtonX5');
 
-            const clickPriceX1 = document.getElementById('clickCostX1')
-            const clickPriceX5 = document.getElementById('clickCostX5')
+            const autoClickerX1 = document.getElementById('autoClickButtonX1');
 
-
+            const clickPriceX1 = document.getElementById('clickCostX1');
+            const clickPriceX5 = document.getElementById('clickCostX5');
+            
+        
 
             doubleClickButtonX1.addEventListener("click", buyClickPowerX1);
             doubleClickButtonX5.addEventListener("click", buyClickPowerX5);
-            moneyButton.addEventListener("click", updateNum);
+
+            autoClickerX1.addEventListener("click",autoClick);            
+
+            moneyButton.addEventListener("click", updateNum); //just added
+            
             
 
 
