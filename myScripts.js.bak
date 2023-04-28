@@ -80,7 +80,7 @@
 			//autoclickers
 			
 			function autoClickY1(){
-				if (totalMoney >=y1){
+				if (totalMoney >=30){
 					totalMoney -= y1;
 					y1 = Math.round(y1 * 1.915)
 					++autoClickPower;

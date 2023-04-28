@@ -28,7 +28,7 @@
         <!-- auto click buttons-->
             <h6> autoclickers! </h6>
 
-            <button id="autoClickButtonY1"> +1 auto clicker $<span id="autoCostY1">30 </span> <!-- still need to add javascript to auport button-->
+            <button id="autoClickButtonX1"> +1 auto clicker $<span id="autoCostY1">30 </span> <!-- still need to add javascript to auport button-->
 
             <script src="myScripts.js"></script>
         </body>
