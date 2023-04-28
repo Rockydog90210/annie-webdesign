@@ -2,7 +2,7 @@
             let clickPower = 1;
             let autoClickPower = 0;
             x1 = 50;
-            x5 = 500;
+            x5 = 350;
 			y1 = 30;
             dragonFrame = 1; // so the computer knows witch frame to display when you click
            AC = false;
