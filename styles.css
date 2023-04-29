@@ -10,11 +10,7 @@ body{
     text-align:center;
     
 }
-    
-button:active{
-        background-color:darkBlue;
-        
-}
+
 p{
     font-family: comic sans ms;
     font-size:35px;
