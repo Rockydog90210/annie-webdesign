@@ -100,6 +100,7 @@
                 clickPriceX1.textContent = x1;
                 cp.textContent = clickPower;
                 totMoney.textContent = totalMoney;
+				updateBackGround()
                 }
 				
             }
@@ -116,6 +117,7 @@
                 clickPriceX5.textContent = x5;
                 cp.textContent = clickPower;
                 totMoney.textContent = totalMoney;
+				updateBackGround()
                 }
             }
 			
@@ -130,6 +132,7 @@
                 clickPriceX10.textContent = x10;
                 cp.textContent = clickPower;
                 totMoney.textContent = totalMoney;
+				updateBackGround()
                 }
             }
 			
@@ -158,6 +161,7 @@
 						setInterval(autoClick, 1000); 
 						AC = true;
 					}
+					updateBackGround()
 				}
 			}
 			
@@ -176,7 +180,7 @@
 						setInterval(autoClick, 1000); 
 						AC = true;
 					}
-					
+					updateBackGround()
 				}
 			}
 			
@@ -195,7 +199,7 @@
 						setInterval(autoClick, 1000); 
 						AC = true;
 					}
-					
+					updateBackGround()
 				}
 			}
 			
