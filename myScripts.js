@@ -18,8 +18,8 @@
 				
 				if (bm == false)
 					document.getElementById("buyMax").style.backgroundColor = "#0F0F43";
-					else if (bm == true)
-						document.getElementById("buyMax").style.backgroundColor = "red";
+				else if (bm == true)
+					document.getElementById("buyMax").style.backgroundColor = "red";
 						
 				if (totalMoney < x1){
 					document.getElementById("clickPowerButtonX1").style.backgroundColor = "#0F0F43";
@@ -124,7 +124,7 @@
             function buyClickPowerX1(){
 				while (totalMoney >= x1 && bm == true){ //if bm is enabled
 					totalMoney -= x1; // subtracts cost from money
-					x1 = Math.round(x1 * 1.0195); //updates the cost of the button
+					x1 = Math.round(x1 * 1.195); //updates the cost of the button
 					++clickPower; //increases click power buy one
 					clickPriceX1.textContent = x1;
 					cp.textContent = clickPower;
@@ -134,7 +134,7 @@
 				
                 if (totalMoney >= x1){ //if bm is not enabled
                 totalMoney -= x1; // subtracts cost from money
-                x1 = Math.round(x1 * 1.0195); //updates the cost of the button
+                x1 = Math.round(x1 * 1.195); //updates the cost of the button
                 ++clickPower; //increases click power buy one
                 clickPriceX1.textContent = x1;
                 cp.textContent = clickPower;
@@ -153,7 +153,7 @@
                         ++clickPower;    
 						}
 					totalMoney -= x5; // subtracts cost from money
-					x5 = Math.round(x5 * 1.0195) //updates the cost of the button
+					x5 = Math.round(x5 * 1.195) //updates the cost of the button
 					clickPriceX5.textContent = x5;
 					cp.textContent = clickPower;
 					totMoney.textContent = totalMoney;
@@ -165,7 +165,7 @@
                         ++clickPower;    
                     }
                 totalMoney -= x5; // subtracts cost from money
-                x5 = Math.round(x5 * 1.0195) //updates the cost of the button
+                x5 = Math.round(x5 * 1.195) //updates the cost of the button
                 clickPriceX5.textContent = x5;
                 cp.textContent = clickPower;
                 totMoney.textContent = totalMoney;
@@ -181,7 +181,7 @@
                         ++clickPower;    
 						}
 					totalMoney -= x10; // subtracts cost from money
-					x10 = Math.round(x10 * 1.0175) //updates the cost of the button
+					x10 = Math.round(x10 * 1.175) //updates the cost of the button
 					clickPriceX10.textContent = x10;
 					cp.textContent = clickPower;
 					totMoney.textContent = totalMoney;
@@ -193,7 +193,7 @@
                         ++clickPower;    
                     }
                 totalMoney -= x10; // subtracts cost from money
-                x10 = Math.round(x10 * 1.0175) //updates the cost of the button
+                x10 = Math.round(x10 * 1.175) //updates the cost of the button
                 clickPriceX10.textContent = x10;
                 cp.textContent = clickPower;
                 totMoney.textContent = totalMoney;
@@ -208,7 +208,7 @@
                         ++clickPower;    
                     }
 					totalMoney -= x20; // subtracts cost from money
-					x20 = Math.round(x20 * 1.0145) //updates the cost of the button
+					x20 = Math.round(x20 * 1.145) //updates the cost of the button
 					clickPriceX20.textContent = x20;
 					cp.textContent = clickPower;
 					totMoney.textContent = totalMoney;
@@ -220,7 +220,7 @@
                         ++clickPower;    
                     }
                 totalMoney -= x20; // subtracts cost from money
-                x20 = Math.round(x20 * 1.0145) //updates the cost of the button
+                x20 = Math.round(x20 * 1.145) //updates the cost of the button
                 clickPriceX20.textContent = x20;
                 cp.textContent = clickPower;
                 totMoney.textContent = totalMoney;
@@ -244,7 +244,7 @@
 			function autoClickY1(){
 				while (totalMoney >= y1 && bm == true){ //if bm is enabled
 					totalMoney -= y1;
-					y1 = Math.round(y1 * 1.0195)
+					y1 = Math.round(y1 * 1.195)
 					++autoClickPower;
 					totMoney.textContent = totalMoney;
 					autoPriceY1.textContent = y1;
@@ -261,7 +261,7 @@
 				if (totalMoney >=y1){ // if bm id diabled
 					
 					totalMoney -= y1;
-					y1 = Math.round(y1 * 1.0195)
+					y1 = Math.round(y1 * 1.195)
 					++autoClickPower;
 					totMoney.textContent = totalMoney;
 					autoPriceY1.textContent = y1;
@@ -279,7 +279,7 @@
 			function autoClickY5(){
 				while (totalMoney >= y5 && bm == true){ //if bm is enabled
 					totalMoney -= y5;
-					y5 = Math.round(y5 * 1.0195)
+					y5 = Math.round(y5 * 1.195)
 					for (var i = 0; i < 5; i++){
                         ++autoClickPower;    
                     }
@@ -295,7 +295,7 @@
 				
 				if (totalMoney >=y5){ // IF BM IS DISBALED
 					totalMoney -= y5;
-					y5 = Math.round(y5 * 1.0195)
+					y5 = Math.round(y5 * 1.195)
 					for (var i = 0; i < 5; i++){
                         ++autoClickPower;    
                     }
@@ -314,7 +314,7 @@
 			function autoClickY10(){
 				while (totalMoney >= y10 && bm == true){ //if bm is enabled
 					totalMoney -= y10;
-					y10 = Math.round(y10 * 1.0195)
+					y10 = Math.round(y10 * 1.195)
 					for (var i = 0; i < 10; i++){
                         ++autoClickPower;    
                     }
@@ -330,7 +330,7 @@
 					
 				if (totalMoney >=y10){
 					totalMoney -= y10;
-					y10 = Math.round(y10 * 1.0195)
+					y10 = Math.round(y10 * 1.195)
 					for (var i = 0; i < 10; i++){
                         ++autoClickPower;    
                     }
