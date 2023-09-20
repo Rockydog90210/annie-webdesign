@@ -358,7 +358,7 @@
 			function autoClickY20(){
 				while (totalMoney >= y20 && bm == true){ //if bm is enabled
 					totalMoney -= y20;
-					y10 = Math.round(y20 * 1.195)
+					y20 = Math.round(y20 * 1.195)
 					for (var i = 0; i < 20; i++){
                         ++autoClickPower;    
                     }
