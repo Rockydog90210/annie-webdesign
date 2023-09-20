@@ -9,6 +9,7 @@
 			y1 = 30;
 			y5 = 300;
 			y10 = 850;
+			y20 = 1000;
             dragonFrame = 1; // so the computer knows witch frame to display when you click
             AC = false;
 			bm = false;
@@ -61,6 +62,11 @@
 				}else if (totalMoney >= y10) {
 					document.getElementById("autoClickButtonY10").style.backgroundColor = "darkblue";
 				}
+				if (totalMoney < y20){
+					document.getElementById("autoClickButtonY20").style.backgroundColor = "#0F0F43";
+				}else if (totalMoney >= y20) {
+					document.getElementById("autoClickButtonY20").style.backgroundColor = "darkblue";
+				}
 				
 			// buttons and stuff
 			}
@@ -79,6 +85,7 @@
             const autoClickerY1 = document.getElementById('autoClickButtonY1');
 			const autoClickerY5 = document.getElementById('autoClickButtonY5');
 			const autoClickerY10 = document.getElementById('autoClickButtonY10');
+			const autoClickerY20 = document.getElementById('autoClickButtonY20');
 			
             const clickPriceX1 = document.getElementById('clickCostX1');
             const clickPriceX5 = document.getElementById('clickCostX5');
@@ -88,6 +95,7 @@
 			const autoPriceY1 = document.getElementById('autoCostY1');
             const autoPriceY5 = document.getElementById('autoCostY5');
 			const autoPriceY10 = document.getElementById('autoCostY10');
+			const autoPriceY20 = document.getElementById('autoCostY20');
 			
 			buyMaxOnOff.addEventListener("click", toggleBuyMax);
 
@@ -99,6 +107,7 @@
             autoClickerY1.addEventListener("click", autoClickY1);
 			autoClickerY5.addEventListener("click", autoClickY5);
 			autoClickerY10.addEventListener("click", autoClickY10);
+			autoClickerY20.addEventListener("click", autoClickY20);
 	
             moneyButton.addEventListener("click", updateNum); 
             
@@ -204,7 +213,7 @@
 			
 			function buyClickPowerX20(){
 				while (totalMoney >= x20 && bm == true){ //if bm is enabled
-					for (var i = 0; i < 10; i++){
+					for (var i = 0; i < 20; i++){
                         ++clickPower;    
                     }
 					totalMoney -= x20; // subtracts cost from money
@@ -216,7 +225,7 @@
 				}
 				
                 if (totalMoney >= x20){
-                    for (var i = 0; i < 10; i++){
+                    for (var i = 0; i < 20; i++){
                         ++clickPower;    
                     }
                 totalMoney -= x20; // subtracts cost from money
@@ -343,6 +352,40 @@
 					}
 					updateBackGround()
 				}
+			}
+			
+			
+			function autoClickY20(){
+				while (totalMoney >= y20 && bm == true){ //if bm is enabled
+					totalMoney -= y20;
+					y10 = Math.round(y20 * 1.195)
+					for (var i = 0; i < 20; i++){
+                        ++autoClickPower;    
+                    }
+					totMoney.textContent = totalMoney;
+					autoPriceY20.textContent = y20;
+					ac.textContent = autoClickPower;
+					if (AC <= false){
+						setInterval(autoClick, 1000); 
+						AC = true;
+					}
+					updateBackGround()
+				}
+					if (totalMoney >=y20){
+						totalMoney -= y20;
+						y10 = Math.round(y20 * 1.195)
+						for (var i = 0; i < 20; i++){
+							++autoClickPower;    
+						}
+						totMoney.textContent = totalMoney;
+						autoPriceY20.textContent = y20;
+						ac.textContent = autoClickPower;
+						if (AC <= false){
+							setInterval(autoClick, 1000); 
+							AC = true;
+						}
+						updateBackGround()
+					}
 			}
 			
 			
