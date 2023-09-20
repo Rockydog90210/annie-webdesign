@@ -373,7 +373,7 @@
 				}
 					if (totalMoney >=y20){
 						totalMoney -= y20;
-						y10 = Math.round(y20 * 1.195)
+						y20 = Math.round(y20 * 1.195)
 						for (var i = 0; i < 20; i++){
 							++autoClickPower;    
 						}
